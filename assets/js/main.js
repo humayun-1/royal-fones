@@ -953,11 +953,11 @@ var mirandaDoc;
             );
         });
         // ===== Modal Popup
-        if (!checkCookie('popup_viewed')) {
-            setTimeout(function() {
-                $("#myModal").modal('show');
-            }, 3000);
-        }
+        // if (!checkCookie('popup_viewed')) {
+        //     setTimeout(function() {
+        //         $("#myModal").modal('show');
+        //     }, 3000);
+        // }
 
     });
 

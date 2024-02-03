@@ -11852,3 +11852,7 @@ footer .copyright-area.light-theme .footer-menu ul li::before {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.restaurant-tab-area .restaurant-rood-list .nav-link:hover svg{
+    color: white;
+}

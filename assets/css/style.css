@@ -48,7 +48,21 @@
 .texture-1{
   position: absolute;
   bottom: -250px;
-  left: -220px;
+  left: -80px;
+  width: 275px;
+  animation: earpods_animation 5s cubic-bezier(0.39, 0.575, 0.565, 1)  infinite;
+}
+
+@keyframes earpods_animation {
+    0%{
+        left: -230px;
+    }
+    50%{
+        left: -50px;
+    }
+    100%{
+        left: -230px;
+    }
 }
 
 html {
@@ -2878,6 +2892,7 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
     position: relative;
     z-index: 1;
     margin-top: 130px;
+    background-attachment: fixed;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -6964,7 +6979,7 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
     display: grid;
     -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
-    -ms-grid-columns: (1fr)[2];
+    /* -ms-grid-columns: (1fr)[2]; */
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
 }
@@ -6989,9 +7004,15 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
     overflow: hidden;
 }
 
+.gallery-loop .single-gallery-image a {
+    width: 100%;
+}
 .gallery-loop .single-gallery-image img {
     -webkit-transition: all 0.4s ease-out 0s;
     transition: all 0.4s ease-out 0s;
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
 }
 
 .gallery-loop .single-gallery-image:hover img {
@@ -9228,6 +9249,8 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
 
 .restaurant-tab-area .food-box .thumb img {
     width: 100%;
+    height: 25rem;
+    object-fit: cover;
 }
 
 .restaurant-tab-area .food-box .thumb .price {
@@ -9391,7 +9414,7 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 450px;
+    height: 500px;
     z-index: 1;
 }
 
@@ -9403,7 +9426,7 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
     width: 100%;
     height: 100%;
     background-color: rgb(40 47 54 / 62%);
-    z-index: -1;
+    z-index: 1;
     transition: all 0.4s ease 0s;
 }
 
@@ -9417,12 +9440,14 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
     visibility: visible;
     width: 100%;
     transition: opacity 0.4s ease 0.4s, visibility 0.4s ease 0.4s;
+    z-index: 2;
 }
 
 .condo-item .title h4 {
     margin-bottom: 15px;
     margin-top: 10px;
     font-weight: 600;
+    z-index: 2;
 }
 
 .condo-item .main-btn {
@@ -9433,6 +9458,7 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
     color: #ffffff;
     line-height: 45px;
     padding: 0 25px;
+    z-index: 2;
 }
 
 .condo-item .title.title-hidden,
@@ -9452,7 +9478,7 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
 }
 
 .condo-item:hover:before {
-    background-color: rgb(76 98 117 / 86%);
+    background-color: rgb(246 207 96 / 60%);
 }
 
 .condo-item:hover .title {
@@ -11855,4 +11881,17 @@ footer .copyright-area.light-theme .footer-menu ul li::before {
 
 .restaurant-tab-area .restaurant-rood-list .nav-link:hover svg{
     color: white;
+}
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
 }

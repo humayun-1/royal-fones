@@ -8,7 +8,7 @@ if($("#map").length > 0){
 	mapboxgl.accessToken = 'pk.eyJ1IjoiaGFtemFzaGF0ZWxhIiwiYSI6ImNqbGs2NXhqMDBpcm8za254YjlwdnhnZjAifQ.S28pWEmFt4b4ysT80zq55g'; // <---- YOUR MAPBOX API KEY GOES HERE
 	var map = new mapboxgl.Map({
 	  style: 'mapbox://styles/mapbox/light-v10',
-	  center: [-77.04, 38.860],
+	  center: [73.0479, 33.6844],
 	  zoom: 11.5,
 	  pitch: 45,
 	  container: 'map',
@@ -19,7 +19,7 @@ if($("#map").length > 0){
 	  The Draggable Marker
 	-------------------------------------------------------------------------------*/
 	var marker = new mapboxgl.Marker()
-	  .setLngLat([-77.04, 38.907])
+	  .setLngLat([73.0479, 33.6844])
 	  .addTo(map);
 
 	/*-------------------------------------------------------------------------------

@@ -936,6 +936,13 @@ var mirandaDoc;
 
     });
 
+
+    document.addEventListener("DOMContentLoaded",()=>{
+        $('.preloader').fadeOut('slow', function() {
+            $(this).remove();
+        });
+    })
+
     // Window Load
     $(window).on('load', function() {
         //===== 17. Preloader

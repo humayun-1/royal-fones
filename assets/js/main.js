@@ -937,11 +937,15 @@ var mirandaDoc;
     });
 
 
-    document.addEventListener("DOMContentLoaded",()=>{
+    // document.addEventListener("DOMContentLoaded",()=>{
+        
+    // })
+
+    setTimeout(() => {
         $('.preloader').fadeOut('slow', function() {
             $(this).remove();
         });
-    })
+    }, 1000);
 
     // Window Load
     $(window).on('load', function() {

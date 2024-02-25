@@ -3187,7 +3187,7 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
 }
 .vertical-text.right{
   left: auto;
-  bottom: calc(50% + 70px);
+  bottom: calc(50% + 15px);
   right: -30px;
   transform: translateY(50%) rotate(90deg);
 }

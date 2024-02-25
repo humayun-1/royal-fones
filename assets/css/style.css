@@ -50,10 +50,10 @@
   bottom: -250px;
   left: -80px;
   width: 275px;
-  animation: earpods_animation 5s cubic-bezier(0.39, 0.575, 0.565, 1)  infinite;
+  animation: Earphones_animation 5s cubic-bezier(0.39, 0.575, 0.565, 1)  infinite;
 }
 
-@keyframes earpods_animation {
+@keyframes Earphones_animation {
     0%{
         left: -230px;
     }
@@ -62,6 +62,27 @@
     }
     100%{
         left: -230px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .texture-1{
+        left: unset !important;
+        right: -80px;
+        bottom: -140px;
+        animation: Earphones_animation_mobile 5s cubic-bezier(0.39, 0.575, 0.565, 1)  infinite;
+    }
+}
+
+@keyframes Earphones_animation_mobile {
+    0%{
+        right: -230px;
+    }
+    50%{
+        right: -50px;
+    }
+    100%{
+        right: -230px;
     }
 }
 
@@ -11894,4 +11915,8 @@ footer .copyright-area.light-theme .footer-menu ul li::before {
     width: 100%;
     object-fit: cover;
     z-index: 0;
+}
+
+.cursor-pointer{
+    cursor: pointer;
 }

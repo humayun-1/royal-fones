@@ -70,6 +70,7 @@
         left: unset !important;
         right: -80px;
         bottom: -140px;
+        width: 160px;
         animation: Earphones_animation_mobile 5s cubic-bezier(0.39, 0.575, 0.565, 1)  infinite;
     }
 }

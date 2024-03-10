@@ -1046,15 +1046,23 @@ var mirandaDoc;
 
 
 document.addEventListener('DOMContentLoaded',()=>{
-    let boxes = document.querySelectorAll('.categories-box-layout-inner .categories-box');
-    let cat_container = document.querySelector('#cat-container');
-    
-    boxes.forEach(box=>{
-        box.addEventListener('click',()=>{
-            console.log(`.restaurant-rood-list .nav-link[href="${box.getAttribute('data-href')}"]`);
-            let link_container = document.querySelector(`.restaurant-rood-list .nav-link[href="#${box.getAttribute('data-href')}"]`);
-            link_container.click()
-            cat_container.scrollIntoView({ behavior: "smooth"});
-        })
+    let boxes = document.querySelectorAll(`a[data-toggle="pill"]`);
+    boxes.forEach(ele=>{
+        let atr = ele.getAttribute("href");
+        let url = window.location.href.includes(atr)
+        if(url){
+            ele.click();
+        }
     })
+    // let boxes = document.querySelectorAll('.categories-box-layout-inner .categories-box');
+    // let cat_container = document.querySelector('#cat-container');
+    
+    // boxes.forEach(box=>{
+    //     box.addEventListener('click',()=>{
+    //         console.log(`.restaurant-rood-list .nav-link[href="${box.getAttribute('data-href')}"]`);
+    //         let link_container = document.querySelector(`.restaurant-rood-list .nav-link[href="#${box.getAttribute('data-href')}"]`);
+    //         link_container.click()
+    //         cat_container.scrollIntoView({ behavior: "smooth"});
+    //     })
+    // })
 })

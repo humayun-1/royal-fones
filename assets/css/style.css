@@ -3190,6 +3190,7 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
   bottom: calc(50% + 15px);
   right: -30px;
   transform: translateY(50%) rotate(90deg);
+  z-index: 22;
 }
 .vertical-text ul{
   display: flex;
@@ -8571,7 +8572,7 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
 
 /*------  categories-box-layout -----*/
 .categories-box-layout {
-    margin-top: -40px;
+    margin-top: 40px;
     position: relative;
     z-index: 2;
 }
@@ -8585,11 +8586,29 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
 .categories-box-layout .categories-box {
     margin-bottom: 30px;
     border: 2px solid #40403b;
-    padding: 20px;
+    padding: 30px 35px;
     display: block;
     position: relative;
     z-index: 1;
     overflow: hidden;
+}
+
+.categories-box-layout .categories-box {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.categories-box-layout .categories-box[data-href="phones"] {
+    background-image: linear-gradient(rgba(28,27,25,0.7),rgba(28,27,25,0.7)),url('../img/phones/21.jpg');
+}
+.categories-box-layout .categories-box[data-href="Earphones"] {
+    background-image: linear-gradient(rgba(28,27,25,0.7),rgba(28,27,25,0.7)),url('../img/phones/11.jpg');
+}
+.categories-box-layout .categories-box[data-href="smart-watch"] {
+    background-image: linear-gradient(rgba(28,27,25,0.7),rgba(28,27,25,0.7)),url('../img/phones/25.jpg');
+}
+.categories-box-layout .categories-box[data-href="laptop"] {
+    background-image: linear-gradient(rgba(28,27,25,0.7),rgba(28,27,25,0.7)),url('../img/phones/mac-2.jpg');
 }
 
 .categories-box-layout .categories-box .icon {
@@ -8608,7 +8627,7 @@ header.header-three.sigma-header .nav-container .menu-right-buttons .cart-dropdo
 }
 
 .categories-box-layout .categories-box .title {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     font-size: 22px;
     font-weight: 500;
 }
